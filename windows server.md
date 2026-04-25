@@ -102,4 +102,39 @@ Kiểm tra trên trình duyệt ta truy cập http://localhots
 #### GIAI ĐOẠN 4: SQL SERVER 2016
 - Sau khi hoàn tất cấu hình web server IIS, tiếp hành triển khai SQL 2016 làm hệ quản trị cơ sở dữ liệu (database server). Việc cấu hình Mixed Mode Authentication là bắt buộc để hỗ trợ các ứng dụng web như wwordress kết nối và quản lý dữ liệu thông qua tài khoản SQL
 
+trên vps và trình duyệt https://software.vietnix.tech/datastore/sources/SQL_Server/sql2016
 
+trong danh sách iện ra tìm file có đuôi chấm iso và dowload về 
+Sau khi tải xong, mở thư mục Downloads.
+
+Chuột phải vào file ISO vừa tải -> Chọn Mount.
+
+**Bước 4.1: Chạy file Setup**
+
+Chạy file setup.exe và bắt đầu quá trình cài đặt như tui đã hướng dẫn chi tiết ở trên.
+<img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/3ca6a5c3-1b35-4e03-a2f5-781436a7b8dc" />
+
+**Bước 4.2: Cửa sổ Installation Center**
+- Nhìn cột bên trái, chọn dòng Installation.
+
+- Nhìn sang bên phải, chọn dòng đầu tiên: New SQL Server stand-alone installation or add features to an existing installation
+
+**Bước 4.3: Đi xuyên qua các bảng phụ (Next liên tục)**
+  <img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/901ec17d-6884-4c27-b39e-69e035eaa47f" />
+
+
+**Bước 4.4: Feature Selection (Chọn tính năng - QUAN TRỌNG)**
+Chỉ tích chọn duy nhất ô: Database Engine Services.
+<img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/285774b0-bf82-4fd8-b6a3-474440381e5e" />
+
+**Bước 4.5: Instance Configuration**
+
+    Chọn Default Instance (để nó tự lấy tên là MSSQLSERVER).
+
+    Nhấn Next.
+
+    tại mục này Dòng SQL Server Browser: Hiện tại nó đang bị Disabled. hãy nhấp vào ô đó và chuyển nó sang Automatic.
+
+   <img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/40a4262a-35c2-4e5a-bb8b-8d4dedbb73ab" />
+
+ - Tại cái này giống như "người dẫn đường" . Khi ta dùng SSMS từ máy ubuntu kết nối vào, nó sẽ giúp tìm thây cái SQL Server này dễ dàng hơn.
