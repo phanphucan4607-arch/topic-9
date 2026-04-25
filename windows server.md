@@ -99,4 +99,7 @@ Kiểm tra trên trình duyệt ta truy cập http://localhots
 
 <img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/3317c338-1718-4c47-864e-d9b807663d42" />
 
+#### GIAI ĐOẠN 4: SQL SERVER 2016
+- Sau khi hoàn tất cấu hình web server IIS, tiếp hành triển khai SQL 2016 làm hệ quản trị cơ sở dữ liệu (database server). Việc cấu hình Mixed Mode Authentication là bắt buộc để hỗ trợ các ứng dụng web như wwordress kết nối và quản lý dữ liệu thông qua tài khoản SQL
+
 
