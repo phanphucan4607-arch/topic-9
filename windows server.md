@@ -138,3 +138,16 @@ Chỉ tích chọn duy nhất ô: Database Engine Services.
    <img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/40a4262a-35c2-4e5a-bb8b-8d4dedbb73ab" />
 
  - Tại cái này giống như "người dẫn đường" . Khi ta dùng SSMS từ máy ubuntu kết nối vào, nó sẽ giúp tìm thây cái SQL Server này dễ dàng hơn.
+
+ **Bước 4.6: Database Engine Configuration**
+- Authentication Mode: Tích chọn Mixed Mode (SQL Server authentication and Windows authentication).
+
+- Password: Nhập mật khẩu là Admin@123 (Nhớ ghi vào báo cáo là mật khẩu này dùng để kết nối WordPress).
+
+- Specify SQL Server administrators: Nhấn vào nút Add Current User ở ngay phía dưới để nó nhận diện đại ca là quản trị viên.
+
+- Nhấn Next -> Install.
+
+<img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/bbedf672-edc5-4dd1-8d0a-bf4bb9afa8e2" />
+
+
