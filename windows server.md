@@ -150,4 +150,8 @@ Chỉ tích chọn duy nhất ô: Database Engine Services.
 
 <img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/bbedf672-edc5-4dd1-8d0a-bf4bb9afa8e2" />
 
+**GIAI ĐOẠN 5. CÀI PHP, WORDRESS VÀ SSL**
+
+Cấu hình Handler Mappings (Để IIS hiểu file .php)
+<img width="866" height="616" alt="image" src="https://github.com/user-attachments/assets/e94c1974-f4f1-450c-a17d-321d9ff9f42a" />
 
