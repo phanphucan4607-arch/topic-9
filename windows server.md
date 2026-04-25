@@ -54,9 +54,60 @@ Mục tiêu: Mục tiêu: Chỉ IP của máy Ubuntu nhà mới được phép R
 
 - Nhìn xuống ô Remote IP address, tích vào These IP addresses -> Nhấn Add.
 
-- Nhập IP máy Ubuntu hiện tại
+- Nhập IP máy Ubuntu hiện tại của ông (Lấy bằng cách gõ curl ifconfig.me trên Terminal Ubuntu).
 
--Nhấn OK -> Apply.
+- Nhấn OK -> Apply.
 
-<img width="452" height="592" alt="image" src="https://github.com/user-attachments/assets/37563c3b-ef5a-450f-b692-a7d8a22b592b" />
+<img width="478" height="642" alt="image" src="https://github.com/user-attachments/assets/370c62cf-32f5-449e-b9f0-d3f25f60d542" />
+
+- Kiểm tra trên máy ubuntu 
+
+<img width="935" height="95" alt="image" src="https://github.com/user-attachments/assets/f5b22ae4-55f3-4162-8505-eb3303055063" />
+
+
+#### 🌐 GIAI ĐOẠN 3: CÀI ĐẶT IIS (WEB SERVER)
+IIS trên windows là dùng đẻe chạy web ta sẽ thực hiện các bước sau 
+
+Mở lại Server Manager -> Chọn Add Roles and Features.
+
+Nhấn Next cho đến phần Server Roles.
+
+- Tìm đến mục Web Server (IIS) -> Mở rộng nó ra -> Mở tiếp mục Web Server.
+
+- Mở rộng mục Common HTTP Features (Các tính năng HTTP chung).
+
+- TÍCH CHỌN vào các ô sau (phải có mấy cái này mới chạy được):
+
+  - Static Content (Để hiện file .htm, .png).
+
+   - Default Document (Để tự nhận diện trang chủ).
+
+  -  HTTP Errors (Để báo lỗi chuẩn).
+
+- Nhấn Next -> Install.
+
+<img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/5e4ea05f-b4ae-494d-8a5b-9bc71c3ed927" />
+
+
+Kiểm tra trên trình duyệt ta truy cập http://localhots 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/af2abb07-d423-4ee0-a585-64ad4a86b930" />
+
+
+- **Tình trạng:** Sau khi cài đặt Role Web Server (IIS), truy cập http://localhost trả về mã lỗi HTTP 404 - Not Found. Trình duyệt Internet Explorer trên Windows Server đồng thời chặn hiển thị nội dung do các thiết lập bảo mật mặc định.
+
+- **Nguyên nhân**: 1.  Dịch vụ IIS chưa được cài đặt thành phần Static Content (Nội dung tĩnh), dẫn đến việc máy chủ không thể xử lý các định dạng file .htm, .png.
+2.  Tính năng IE Enhanced Security Configuration (IE ESC) đang ở trạng thái On, gây hạn chế quyền truy cập của trình duyệt ngay cả với các địa chỉ nội bộ.
+
+
+
+- Giải pháp thực hiện:
+
+  +  Truy cập Server Manager > Local Server: Chuyển trạng thái IE Enhanced Security Configuration sang Off để cho phép trình duyệt hiển thị nội dung cục bộ.
+
+  +  Truy cập Add Roles and Features: Bổ sung Role Service Static Content và Default Document trong nhóm Common HTTP Features.
+
+  + Thực thi lệnh iisreset qua Command Prompt để khởi động lại dịch vụ (rõ cmd nhập câu lệnh iisreset)
+
+<img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/3317c338-1718-4c47-864e-d9b807663d42" />
+
 
