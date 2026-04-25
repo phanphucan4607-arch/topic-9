@@ -144,7 +144,7 @@ Chỉ tích chọn duy nhất ô: Database Engine Services.
 
 - Password: Nhập mật khẩu là Admin@123 (Nhớ ghi vào báo cáo là mật khẩu này dùng để kết nối WordPress).
 
-- Specify SQL Server administrators: Nhấn vào nút Add Current User ở ngay phía dưới để nó nhận diện đại ca là quản trị viên.
+- Specify SQL Server administrators: Nhấn vào nút Add Current User ở ngay phía dưới để nó nhận diện là quản trị viên.
 
 - Nhấn Next -> Install.
 
@@ -155,3 +155,26 @@ Chỉ tích chọn duy nhất ô: Database Engine Services.
 Cấu hình Handler Mappings (Để IIS hiểu file .php)
 <img width="866" height="616" alt="image" src="https://github.com/user-attachments/assets/e94c1974-f4f1-450c-a17d-321d9ff9f42a" />
 
+Bước 1: Chạy lại bộ cài SSMS
+
+    Vào lại thư mục Downloads.
+
+    Tìm file SSMS-Setup-ENU.exe, chuột phải chọn Run as administrator.
+
+    Lần này nhấn Install, nó sẽ không báo lỗi .NET nữa mà chạy vèo vèo. Đợi nó chạy xong (hiện chữ Setup Completed) là xong.
+
+<img width="866" height="616" alt="image" src="https://github.com/user-attachments/assets/59a8dca1-cd1e-4851-bac8-341ace5bb617" />
+
+🛠️ Bước 2: Đổi lại mật khẩu và Kích hoạt tài khoản sa
+
+Ở cột bên trái, tìm thư mục Security -> Nhấn dấu cộng + để mở ra.
+
+Mở tiếp thư mục Logins.
+
+Tìm cái tên sa, chuột phải vào nó chọn Properties.
+
+Tại tab General: gõ lại mật khẩu mới vào 2 ô Password (nhớ gõ chậm thôi: Admin123@)
+Tại tab Status: * Chỗ Settings -> Login: Chọn Enabled (để chắc chắn nó không bị khóa).
+
+Nhấn OK.
+<img width="866" height="616" alt="image" src="https://github.com/user-attachments/assets/96c00005-ad67-4573-b7b6-a1344f8b9ffd" />
