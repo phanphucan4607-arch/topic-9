@@ -233,3 +233,9 @@ extension=pdo_mysql (Nếu  có ý định dùng MySQL sau này)
 tải file và chạy nhấn install 
 
 <img width="476" height="319" alt="image" src="https://github.com/user-attachments/assets/f60c68b5-7da0-45aa-b6ba-02af196c4f89" />
+
+tiến hiền lên trình duyệt truy cập http://localhost 
+<img width="910" height="983" alt="image" src="https://github.com/user-attachments/assets/287eb2e9-540a-495b-af44-e95c367d78af" />
+
+Điền thông tin như sau 
+<img width="910" height="983" alt="image" src="https://github.com/user-attachments/assets/8740efaf-ce06-4985-bf5f-12764b2a02e5" />
