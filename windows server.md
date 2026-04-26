@@ -178,3 +178,36 @@ Tại tab Status: * Chỗ Settings -> Login: Chọn Enabled (để chắc chắn
 
 Nhấn OK.
 <img width="866" height="616" alt="image" src="https://github.com/user-attachments/assets/96c00005-ad67-4573-b7b6-a1344f8b9ffd" />
+
+**bước 3 tạo database cho wordress**
+lúc này đang ở trong SSMS ở cột bên phải chuột phải vào chứ database 
+- chọn New Database...
+- ô database name: wordpress_db
+- nhấn Ok.
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f99418f4-ba5a-4cf0-ab30-a021eb8f45a4" />
+
+**Bước 4 cấu hình cho php**
+ta phải mở khóa các tinh ăng để PHP có thể chạy được wordpress.
+truy cạp thoe đường dẫn **c:\php** và tìm file có tên **php.ini**
+- tìm vào xóa dấu ; ở các dòng sau
+  ```
+  extension_dir = "ext" (Dòng này cực quan trọng để nó tìm thấy thư mục ext).
+
+extension=curl
+
+extension=gd
+
+extension=mbstring
+
+extension=openssl
+
+extension=pdo_mysql ( nếu có ý định dùng MySQL sau này).
+```
+- save
+
+- mở IIS Manager -> chọn server ở cột bên trái -> nhấn resart ở cột bên phải
+
+
+  
+  
+
