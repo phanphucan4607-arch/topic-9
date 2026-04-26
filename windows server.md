@@ -190,8 +190,9 @@ lúc này đang ở trong SSMS ở cột bên phải chuột phải vào chứ d
 ta phải mở khóa các tinh ăng để PHP có thể chạy được wordpress.
 truy cạp thoe đường dẫn **c:\php** và tìm file có tên **php.ini**
 - tìm vào xóa dấu ; ở các dòng sau
-  ```
-  extension_dir = "ext" (Dòng này cực quan trọng để nó tìm thấy thư mục ext).
+
+```
+extension_dir = "ext" (Dòng này cực quan trọng để nó tìm thấy thư mục ext).
 
 extension=curl
 
@@ -201,13 +202,34 @@ extension=mbstring
 
 extension=openssl
 
-extension=pdo_mysql ( nếu có ý định dùng MySQL sau này).
+extension=pdo_mysql (Nếu  có ý định dùng MySQL sau này)
 ```
+  
 - save
 
 - mở IIS Manager -> chọn server ở cột bên trái -> nhấn resart ở cột bên phải
 
+**Bước 5. triển khai wordpress % phân quyền**
+- vào c:\inetpub\wwwroot, xóa sạch file cũ
+- copy toàn bộ file bên trong thư mục wordpress (đã được giải nén) và dán vào c:inetpub\wwwroot.
+- cấp quyền cho thư mục
+  + chuột phải vào wwwroot -> Properties -> security -> edit
+  + nhấn Add -> rõ IIS_IUSRS -> ok
+  + tích vào full control -> oke -> oke
+    
+  <img width="369" height="505" alt="image" src="https://github.com/user-attachments/assets/26f0e05f-b8cf-4f3c-a698-6cc4b456c506" />
 
-  
-  
+- cáu hình IIS uw tiên chạy file wordpress
+để màn hình xanh biến mất và hiện trạng thái cài đặt wordpress:
++ mở IIS manager.
++ chọn Default Web Site ở cột bên trái
++ nhấp vào Default Document ở giữa
++ nhìn sang cột bên phải nhấn Add
++ gõ index.php rồi oke
++ chọn index.php nhấn Move up ở cột bên phải cho nó lên trên cùng   
 
+****Bước 6 cài Visual C++ Redistributable****
+đây là nguyên nhân lỗi 500. PHP 8.x cần thư viện này để chạy, mà windows server mặc định thường không có 
+tải file và chạy nhấn install 
+
+<img width="476" height="319" alt="image" src="https://github.com/user-attachments/assets/f60c68b5-7da0-45aa-b6ba-02af196c4f89" />
