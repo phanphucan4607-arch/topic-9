@@ -1,4 +1,4 @@
-
+<img width="817" height="595" alt="image" src="https://github.com/user-attachments/assets/7a7d328b-3b78-4761-bf14-082eff03ad93" />
 #### 🛠️ GIAI ĐOẠN 1: CÀI ĐẶT CÔNG CỤ REMMINA (TRÊN UBUNTU)
 ```
 sudo apt update && sudo apt install remmina remmina-plugin-rdp -y
@@ -99,94 +99,14 @@ Kiểm tra trên trình duyệt ta truy cập http://localhots
 
 <img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/3317c338-1718-4c47-864e-d9b807663d42" />
 
-#### GIAI ĐOẠN 4: SQL SERVER 2016
-- Sau khi hoàn tất cấu hình web server IIS, tiếp hành triển khai SQL 2016 làm hệ quản trị cơ sở dữ liệu (database server). Việc cấu hình Mixed Mode Authentication là bắt buộc để hỗ trợ các ứng dụng web như wwordress kết nối và quản lý dữ liệu thông qua tài khoản SQL
 
-trên vps và trình duyệt https://software.vietnix.tech/datastore/sources/SQL_Server/sql2016
-
-trong danh sách iện ra tìm file có đuôi chấm iso và dowload về 
-Sau khi tải xong, mở thư mục Downloads.
-
-Chuột phải vào file ISO vừa tải -> Chọn Mount.
-
-**Bước 4.1: Chạy file Setup**
-
-Chạy file setup.exe và bắt đầu quá trình cài đặt như tui đã hướng dẫn chi tiết ở trên.
-<img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/3ca6a5c3-1b35-4e03-a2f5-781436a7b8dc" />
-
-**Bước 4.2: Cửa sổ Installation Center**
-- Nhìn cột bên trái, chọn dòng Installation.
-
-- Nhìn sang bên phải, chọn dòng đầu tiên: New SQL Server stand-alone installation or add features to an existing installation
-
-**Bước 4.3: Đi xuyên qua các bảng phụ (Next liên tục)**
-  <img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/901ec17d-6884-4c27-b39e-69e035eaa47f" />
+**GIAI ĐOẠN 4. - Webserver IIS, trên Webserver IIS**
+Bước 1 cài đặt php phiên bản 8.2 
+- tải về và tiến hahf giải nén vào thư mục C:\inetpub\wwwroot
+<img width="833" height="506" alt="image" src="https://github.com/user-attachments/assets/3c4e0940-39b4-495e-8450-e034d18d9666" />
 
 
-**Bước 4.4: Feature Selection (Chọn tính năng - QUAN TRỌNG)**
-Chỉ tích chọn duy nhất ô: Database Engine Services.
-<img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/285774b0-bf82-4fd8-b6a3-474440381e5e" />
-
-**Bước 4.5: Instance Configuration**
-
-    Chọn Default Instance (để nó tự lấy tên là MSSQLSERVER).
-
-    Nhấn Next.
-
-    tại mục này Dòng SQL Server Browser: Hiện tại nó đang bị Disabled. hãy nhấp vào ô đó và chuyển nó sang Automatic.
-
-   <img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/40a4262a-35c2-4e5a-bb8b-8d4dedbb73ab" />
-
- - Tại cái này giống như "người dẫn đường" . Khi ta dùng SSMS từ máy ubuntu kết nối vào, nó sẽ giúp tìm thây cái SQL Server này dễ dàng hơn.
-
- **Bước 4.6: Database Engine Configuration**
-- Authentication Mode: Tích chọn Mixed Mode (SQL Server authentication and Windows authentication).
-
-- Password: Nhập mật khẩu là Admin@123 (Nhớ ghi vào báo cáo là mật khẩu này dùng để kết nối WordPress).
-
-- Specify SQL Server administrators: Nhấn vào nút Add Current User ở ngay phía dưới để nó nhận diện là quản trị viên.
-
-- Nhấn Next -> Install.
-
-<img width="875" height="600" alt="image" src="https://github.com/user-attachments/assets/bbedf672-edc5-4dd1-8d0a-bf4bb9afa8e2" />
-
-**GIAI ĐOẠN 5. CÀI PHP, WORDRESS VÀ SSL**
-
-Cấu hình Handler Mappings (Để IIS hiểu file .php)
-<img width="866" height="616" alt="image" src="https://github.com/user-attachments/assets/e94c1974-f4f1-450c-a17d-321d9ff9f42a" />
-
-Bước 1: Chạy lại bộ cài SSMS
-
-    Vào lại thư mục Downloads.
-
-    Tìm file SSMS-Setup-ENU.exe, chuột phải chọn Run as administrator.
-
-    Lần này nhấn Install, nó sẽ không báo lỗi .NET nữa mà chạy vèo vèo. Đợi nó chạy xong (hiện chữ Setup Completed) là xong.
-
-<img width="866" height="616" alt="image" src="https://github.com/user-attachments/assets/59a8dca1-cd1e-4851-bac8-341ace5bb617" />
-
-🛠️ Bước 2: Đổi lại mật khẩu và Kích hoạt tài khoản sa
-
-Ở cột bên trái, tìm thư mục Security -> Nhấn dấu cộng + để mở ra.
-
-Mở tiếp thư mục Logins.
-
-Tìm cái tên sa, chuột phải vào nó chọn Properties.
-
-Tại tab General: gõ lại mật khẩu mới vào 2 ô Password (nhớ gõ chậm thôi: Admin123@)
-Tại tab Status: * Chỗ Settings -> Login: Chọn Enabled (để chắc chắn nó không bị khóa).
-
-Nhấn OK.
-<img width="866" height="616" alt="image" src="https://github.com/user-attachments/assets/96c00005-ad67-4573-b7b6-a1344f8b9ffd" />
-
-**bước 3 tạo database cho wordress**
-lúc này đang ở trong SSMS ở cột bên phải chuột phải vào chứ database 
-- chọn New Database...
-- ô database name: wordpress_db
-- nhấn Ok.
-  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f99418f4-ba5a-4cf0-ab30-a021eb8f45a4" />
-
-**Bước 4 cấu hình cho php**
+**Bước 2 cấu hình cho php**
 ta phải mở khóa các tinh ăng để PHP có thể chạy được wordpress.
 truy cạp thoe đường dẫn **c:\php** và tìm file có tên **php.ini**
 - tìm vào xóa dấu ; ở các dòng sau
@@ -209,7 +129,7 @@ extension=pdo_mysql (Nếu  có ý định dùng MySQL sau này)
 
 - mở IIS Manager -> chọn server ở cột bên trái -> nhấn resart ở cột bên phải
 
-**Bước 5. triển khai wordpress % phân quyền**
+**Bước 3. triển khai wordpress % phân quyền**
 - vào c:\inetpub\wwwroot, xóa sạch file cũ
 - copy toàn bộ file bên trong thư mục wordpress (đã được giải nén) và dán vào c:inetpub\wwwroot.
 - cấp quyền cho thư mục
@@ -228,7 +148,15 @@ extension=pdo_mysql (Nếu  có ý định dùng MySQL sau này)
 + gõ index.php rồi oke
 + chọn index.php nhấn Move up ở cột bên phải cho nó lên trên cùng   
 
-Tiến hành cài đặt MySQL 5.7
+**Tiến hành cài Visual Studio**
+- đa số các phần mềm chạy trên windows (như PHP, MySQL) điều được viết bằng ngôn ngữ lập trình trình c++ và biên dịch bằng công cụ Visual Studio.
+- khi lập trình viên tạo ra phần mềm, họ sử dụng những đoạn code có sẵn từ Microsoft. Để những phần mềm đó chạy được trên máy tính, máy chúng ta phải có bộ thư viện đó thì nó mới hiểu được các câu lệnh từ C++ đó là gì.
+
+tải file và chạy nhấn install 
+<img width="476" height="319" alt="image" src="https://github.com/user-attachments/assets/f60c68b5-7da0-45aa-b6ba-02af196c4f89" />
+
+
+**Tiến hành cài đặt MySQL 5.7**
 Vào đường link : https://dev.mysql.com/downloads/installer/
 
 <img width="910" height="983" alt="image" src="https://github.com/user-attachments/assets/e9b9228a-9a81-4b75-b02d-5694bbd39fc1" />
@@ -272,14 +200,87 @@ tiến hiền lên trình duyệt truy cập http://localhost
 Điền thông tin như sau 
 <img width="910" height="983" alt="image" src="https://github.com/user-attachments/assets/8740efaf-ce06-4985-bf5f-12764b2a02e5" />
 
-****Bước 6 cài Visual C++ Redistributable****
-đây là nguyên nhân lỗi 500. PHP 8.x cần thư viện này để chạy, mà windows server mặc định thường không có 
+- login 
+<img width="1809" height="902" alt="image" src="https://github.com/user-attachments/assets/6a1a34c6-6db3-4284-abb8-177b260a67c5" />
 
-`
 
-tải file và chạy nhấn install 
+#### Cài SQL server 2016 trên Windows Server 2016
+SQl Server 2016 là một phiên bản của hệ quản trị cơ sở dữ liệu (DBMS) do Microsoft phát triển và phát hành. Nó là một bản cập nhật lớn cho dòng sản phẩm Microsoft SQL Server và được phát hành vào tháng 6 năm 2016. Dưới đây là một số tính năng của SQL Server 2016
 
-<img width="476" height="319" alt="image" src="https://github.com/user-attachments/assets/f60c68b5-7da0-45aa-b6ba-02af196c4f89" />
+- Always Encrypted: Cung cấp khả năng mã hóa dữ liệu trong cơ sở dữ liệu và ghi giải mã nó khi cần thiết, giwux cho dữ liệu luôn an toàn trong quá trình truyền tải và lưu trữ.
+- Strech Database: Cho phép di chuyển một phần bảng dữ liệu và Azure để giảm chi phí lưu trữ địa phương và tối ưu hóa hiệu suất truy vấn.
+- Polybase: Kết hợp dữ liệu từ cơ sỡ dữ liệu quan hệ với dữ liệu không quan hệ, giúp người dùng truy vấn và kếthợp dữ liệu từ nhiều nguồn khác nhau.
+- JSON Support: Hỗ trợ xử lý và truy vấn dữ liệu JSON natively, làm cho việc làm việc với dữ liệu dạng JSON trở nên dễ dàng hơn
+- Query Store: Lưu trữ lịch sử của các kế hoạch truy vấn và thống kê thay đổi, giúp quản trị viên và nhà phân tích hiểu rõ hiệu suất của các truy vấn.
+- Row-level Security (RLS): Cho phép xác định quyền truy cập dữ liệu dựa trên các điều kiện được xác định, giúp tăng cường bảo mật.
+- Dynamic Data Masking: Ẩn dữ liệu nhạy cảm từ người dùng không có quyền truy cập, giảm rủi ro bảo mật.
 
+trên vps và trình duyệt https://software.vietnix.tech/datastore/sources/SQL_Server/sql2016
+
+trong danh sách iện ra tìm file có đuôi chấm iso và dowload về 
+Sau khi tải xong, mở thư mục Downloads.
+
+Chuột phải vào file ISO vừa tải -> Chọn Mount.
+
+**Chạy file Setup**
+- Chọn Install
+- Cung cấp Product Key nếu muôn sử dụng bản Enterpise đầy đủ
+<img width="825" height="632" alt="image" src="https://github.com/user-attachments/assets/2f12c385-d257-4ea3-8b9a-8436dff4f1b1" />
+
+- chấp nhận chính sách của Microsoft. Sau đó Next
+<img width="825" height="632" alt="image" src="https://github.com/user-attachments/assets/f83d5e0f-caf9-40b3-945f-c9393be306d3" />
+
+- Chọn các tính năng mà muốn cài đặt. Chắc chắn rằng "Database Engine Services" được cài đặt máy chủ SQL. Ở đây ta sẽ chọn tất cả và bỏ chọn "PolyBase Query Serice for External Data".
+- sau đó Next 
+<img width="825" height="632" alt="image" src="https://github.com/user-attachments/assets/e2b64f5d-aa29-41a3-8ba6-561dc30c0cca" />
+
+Next
+<img width="825" height="632" alt="image" src="https://github.com/user-attachments/assets/3ad2dc2d-d0df-4871-978c-2513a50fc2bd" />
+
+Tiếp tục để nguyên vậy và bấm Next.
+<img width="817" height="595" alt="image" src="https://github.com/user-attachments/assets/ecdd98f6-4b48-4df6-b1b1-1822c54ce79f" />
+
+Bấm Add Current User để thêm user quản lý sau đó bấm next.
+<img width="817" height="595" alt="image" src="https://github.com/user-attachments/assets/1cb8dc53-4c16-46d6-93bd-0d8ff4babbcf" />
+
+- ở đây cũng vậy
+<img width="817" height="595" alt="image" src="https://github.com/user-attachments/assets/21578b05-f8d3-43f0-80f9-b9c50ce607bd" />
+
+- ở phần này chúng ta để mặc định sau đó bấm next
+  <img width="817" height="595" alt="image" src="https://github.com/user-attachments/assets/c36d81f8-8cec-4b3b-9570-e98738a44070" />
+
+Bấm vào Add Current User để thêm user quản lý, sau đó bấm  Next  để tiếp tục.
+
+- Bấm Accept trước rồi Next
+<img width="817" height="595" alt="image" src="https://github.com/user-attachments/assets/57b81ceb-27ce-4e81-a693-8761cb0dbe33" />
+
+Tới đây ta cần cài bổ sung các thư viện này cho Microsoft bằng cá truy cập và 2 link mà SQL server 2016 hiện lên, sau khi cài ta sẽ chọn đường dẫn tới thư mục tải file .cab đó về.
+```
+https://go.microsoft.com/fwlink/?LinkId=761266&lcid=1033 
+ https://go.microsoft.com/fwlink/?LinkId=735051&lcid=1033 
+```
+<img width="384" height="46" alt="image" src="https://github.com/user-attachments/assets/b641675b-9d95-4317-8004-7c90b9596a28" />
+
+- kết quả sẽ như thế này
+<img width="814" height="604" alt="image" src="https://github.com/user-attachments/assets/096a972c-57de-4950-b665-b967b0a05e76" />
+
+- Bấm Instal để tiến trình cài đặt
+<img width="814" height="604" alt="image" src="https://github.com/user-attachments/assets/8a6b8571-06a7-4116-b95d-037a6bb920ba" />
+
+- Hoàn tất qaus trình cài đặt
+<img width="814" height="604" alt="image" src="https://github.com/user-attachments/assets/7be3ed26-eed4-458a-9a68-aae4d3d44ba5" />
+
+
+##### Cài đặt công cụ quản lý SQL Server Management Studio 
+SQL Server Management Tools là công cụ dành cho quản lý và tương tác với Microsoft SQL Server.
+Những công cụ này cung cấp giao diện người dùng đồ họa để thực hiện nhiều thao tác vụ quản lý cơ sở dữ liệu, từ tạo cơ sở dữ liệu mới đến quản lý người dùng và sao lưu dữ liệu.
+
+- quay lại file setup.ext và chạy nó lần nữa 
+-  sau đó chọn Instal SQL Server Management Tools.4
+-  Nó sẽ dẫn bạn tới 1 trang download SQL Server Management Studio.
+<img width="814" height="604" alt="image" src="https://github.com/user-attachments/assets/39e2ed54-e0ce-4298-b3c0-6cf22f8b7dde" />
+
+- bấm vào instal và đợi hệ thóng tự cài đặt SQL Server Management Studio
+<img width="812" height="627" alt="image" src="https://github.com/user-attachments/assets/4f64e81c-b86f-48b2-a5a3-5d48ee6a833f" />
 
 
