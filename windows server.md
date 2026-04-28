@@ -4,7 +4,7 @@ sudo apt update && sudo apt install remmina remmina-plugin-rdp -y
 ```
 + Ở ô chọn giao thức (bên trái ô nhập IP): Chọn RDP.
 
-+ Ở ô nhập địa chỉ: Nhập IP của VPS: 221.132.21.141.
++ Ở ô nhập địa chỉ: Nhậap IP của VPS: 221.132.21.141.
 
 + Nhấn Enter
 
