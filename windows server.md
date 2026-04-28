@@ -1,4 +1,3 @@
-<img width="817" height="595" alt="image" src="https://github.com/user-attachments/assets/7a7d328b-3b78-4761-bf14-082eff03ad93" />
 #### 🛠️ GIAI ĐOẠN 1: CÀI ĐẶT CÔNG CỤ REMMINA (TRÊN UBUNTU)
 ```
 sudo apt update && sudo apt install remmina remmina-plugin-rdp -y
