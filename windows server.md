@@ -203,6 +203,24 @@ tiến hiền lên trình duyệt truy cập http://localhost
 - login 
 <img width="1809" height="902" alt="image" src="https://github.com/user-attachments/assets/6a1a34c6-6db3-4284-abb8-177b260a67c5" />
 
+##### Cài đặt SSL
+- Vào IIL Manager
+- tìm mục Server Certificates
+- ở cột Actions chọn: Create Self-Signed Certificate...
+<img width="202" height="207" alt="image" src="https://github.com/user-attachments/assets/686278e5-1e67-4ccb-91b4-177a25df3e91" />
+
+- đặt tên
+<img width="677" height="538" alt="image" src="https://github.com/user-attachments/assets/33010aaa-424f-4299-86d4-4ca00e79b1b1" />
+
+**Gán SSL vào web wordpress**
+- ở cột bên trái tìm đến mục: Default Web Site
+- nhấn Bindings...
+- Nhấn Add
+- type: Chọn https
+- SSL certificate: chọn tên vừa mới đặt ở trên
+
+<img width="677" height="538" alt="image" src="https://github.com/user-attachments/assets/1806d717-b781-4e9a-9c4e-e98e6b2560a0" />
+
 
 #### Cài SQL server 2016 trên Windows Server 2016
 SQl Server 2016 là một phiên bản của hệ quản trị cơ sở dữ liệu (DBMS) do Microsoft phát triển và phát hành. Nó là một bản cập nhật lớn cho dòng sản phẩm Microsoft SQL Server và được phát hành vào tháng 6 năm 2016. Dưới đây là một số tính năng của SQL Server 2016
@@ -282,5 +300,13 @@ Những công cụ này cung cấp giao diện người dùng đồ họa để 
 
 - bấm vào instal và đợi hệ thóng tự cài đặt SQL Server Management Studio
 <img width="812" height="627" alt="image" src="https://github.com/user-attachments/assets/4f64e81c-b86f-48b2-a5a3-5d48ee6a833f" />
+
+- Kiểm tra kết nối SQL Server
+  Để kết nối tới Microsoft SQL Serve 2016, mở công cụ SQL Server Managament Studio
+- Nhấn Connect 
+  <img width="763" height="542" alt="image" src="https://github.com/user-attachments/assets/369a1d71-5286-47f7-af93-9f0867008ecd" />
+
+
+<img width="882" height="402" alt="image" src="https://github.com/user-attachments/assets/4447b400-055f-4bb6-9dee-260080f10041" />
 
 
