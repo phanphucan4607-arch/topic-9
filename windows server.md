@@ -252,7 +252,7 @@ Chuột phải vào file ISO vừa tải -> Chọn Mount.
 <img width="825" height="632" alt="image" src="https://github.com/user-attachments/assets/e2b64f5d-aa29-41a3-8ba6-561dc30c0cca" />
 
 Next
-<img width="825" height="632" alt="image" src="https://github.com/user-attachments/assets/3ad2dc2d-d0df-4871-978c-2513a50fc2bd" />
+<img width="807" height="619" alt="image" src="https://github.com/user-attachments/assets/86237939-0c0b-4cd9-b811-24172b35d9e6" />
 
 Tiếp tục để nguyên vậy và bấm Next.
 <img width="817" height="595" alt="image" src="https://github.com/user-attachments/assets/ecdd98f6-4b48-4df6-b1b1-1822c54ce79f" />
@@ -288,24 +288,6 @@ https://go.microsoft.com/fwlink/?LinkId=735051&lcid=1033
 <img width="814" height="604" alt="image" src="https://github.com/user-attachments/assets/7be3ed26-eed4-458a-9a68-aae4d3d44ba5" />
 
 
-##### Cài đặt công cụ quản lý SQL Server Management Studio 
-SQL Server Management Tools là công cụ dành cho quản lý và tương tác với Microsoft SQL Server.
-Những công cụ này cung cấp giao diện người dùng đồ họa để thực hiện nhiều thao tác vụ quản lý cơ sở dữ liệu, từ tạo cơ sở dữ liệu mới đến quản lý người dùng và sao lưu dữ liệu.
 
-- quay lại file setup.ext và chạy nó lần nữa 
--  sau đó chọn Instal SQL Server Management Tools.4
--  Nó sẽ dẫn bạn tới 1 trang download SQL Server Management Studio.
-<img width="814" height="604" alt="image" src="https://github.com/user-attachments/assets/39e2ed54-e0ce-4298-b3c0-6cf22f8b7dde" />
-
-- bấm vào instal và đợi hệ thóng tự cài đặt SQL Server Management Studio
-<img width="812" height="627" alt="image" src="https://github.com/user-attachments/assets/4f64e81c-b86f-48b2-a5a3-5d48ee6a833f" />
-
-- Kiểm tra kết nối SQL Server
-  Để kết nối tới Microsoft SQL Serve 2016, mở công cụ SQL Server Managament Studio
-- Nhấn Connect 
-  <img width="763" height="542" alt="image" src="https://github.com/user-attachments/assets/369a1d71-5286-47f7-af93-9f0867008ecd" />
-
-
-<img width="882" height="402" alt="image" src="https://github.com/user-attachments/assets/4447b400-055f-4bb6-9dee-260080f10041" />
 
 
