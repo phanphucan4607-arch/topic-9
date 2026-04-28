@@ -105,7 +105,7 @@ Bước 1 cài đặt php phiên bản 8.2
 <img width="833" height="506" alt="image" src="https://github.com/user-attachments/assets/3c4e0940-39b4-495e-8450-e034d18d9666" />
 
 
-**Bước 2 cấu hình cho php**
+**cấu hình cho php**
 ta phải mở khóa các tinh ăng để PHP có thể chạy được wordpress.
 truy cạp thoe đường dẫn **c:\php** và tìm file có tên **php.ini**
 - tìm vào xóa dấu ; ở các dòng sau
