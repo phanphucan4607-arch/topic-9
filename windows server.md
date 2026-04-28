@@ -229,10 +229,12 @@ extension=pdo_mysql (Nếu  có ý định dùng MySQL sau này)
 + chọn index.php nhấn Move up ở cột bên phải cho nó lên trên cùng   
 
 Tiến hành cài đặt MySQL 5.7
+Vào đường link : https://dev.mysql.com/downloads/installer/
+
 <img width="910" height="983" alt="image" src="https://github.com/user-attachments/assets/e9b9228a-9a81-4b75-b02d-5694bbd39fc1" />
 Tiến Hành Tạo Database Và Tạo Website WordPress.
 - mở cmd với quyền admin gõ lệnh sau đó nó sẽ hỏi hỏi mật khẩu lúc tạo MySQL
-```
+
 "C:\Program Files\MySQL\MySQL Server 5.7\bin\mysql.exe" -u root -p
 
 ```
@@ -249,22 +251,35 @@ Query OK, 0 rows affected (0.00 sec)
 mysql> FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
 ```
+**Cài môi trường PHP.**
+Cài PHP Manager: https://www.iis.net/downloads/community/2018/05/php-manager-150-for-iis-10
+cài bản 1.5.0
+<img width="602" height="305" alt="image" src="https://github.com/user-attachments/assets/7abb62da-a9de-4f2b-a18c-408306c47960" />
 
-<img width="910" height="983" alt="image" src="https://github.com/user-attachments/assets/f6ba91ec-34a2-4404-9f2c-44e3fe623d87" />
+**config môi trường PHP**
+ta vào trong phần IIS để config 
+ta truy cập Server manager -> tools -> IIS
+- chọn PHP Manager
+<img width="602" height="305" alt="image" src="https://github.com/user-attachments/assets/38986931-3900-497d-9839-c24d702695fd" />
 
-****Bước 6 cài Visual C++ Redistributable****
-đây là nguyên nhân lỗi 500. PHP 8.x cần thư viện này để chạy, mà windows server mặc định thường không có 
-
-
-
-tải file và chạy nhấn install 
-
-<img width="476" height="319" alt="image" src="https://github.com/user-attachments/assets/f60c68b5-7da0-45aa-b6ba-02af196c4f89" />
+- Sau đó ta chọn Register new PHP viersion để thêm thư mục php ta đã giải nén ở trên 
+- Sau khi xong ta sẽ được như thế này
+<img width="602" height="305" alt="image" src="https://github.com/user-attachments/assets/d41565ad-bd89-423b-9395-859411d55413" />
 
 tiến hiền lên trình duyệt truy cập http://localhost 
 <img width="910" height="983" alt="image" src="https://github.com/user-attachments/assets/287eb2e9-540a-495b-af44-e95c367d78af" />
 
 Điền thông tin như sau 
 <img width="910" height="983" alt="image" src="https://github.com/user-attachments/assets/8740efaf-ce06-4985-bf5f-12764b2a02e5" />
+
+****Bước 6 cài Visual C++ Redistributable****
+đây là nguyên nhân lỗi 500. PHP 8.x cần thư viện này để chạy, mà windows server mặc định thường không có 
+
+`
+
+tải file và chạy nhấn install 
+
+<img width="476" height="319" alt="image" src="https://github.com/user-attachments/assets/f60c68b5-7da0-45aa-b6ba-02af196c4f89" />
+
 
 
