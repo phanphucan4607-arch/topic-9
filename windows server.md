@@ -284,7 +284,7 @@ https://go.microsoft.com/fwlink/?LinkId=735051&lcid=1033
 - Bấm Instal để tiến trình cài đặt
 <img width="814" height="604" alt="image" src="https://github.com/user-attachments/assets/8a6b8571-06a7-4116-b95d-037a6bb920ba" />
 
-- Hoàn tất qaus trình cài đặt
+- Hoàn tất quá trình cài đặt
 <img width="814" height="604" alt="image" src="https://github.com/user-attachments/assets/7be3ed26-eed4-458a-9a68-aae4d3d44ba5" />
 
 
